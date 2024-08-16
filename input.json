@@ -1,0 +1,31 @@
+{
+  "auth_token": "your_auth_token_here",
+  "machine":"cpu/gpu",
+  "params": {
+    "X_VALUE": "value1",
+    "Y_VALUE": "value2",
+    "Z_Value": "value3"
+  },
+  "gfalcon": [
+    { 
+      "follow": "serial/parallel",
+      "language": "python",
+      "code": "print('Hello, world!')"
+    },
+    { 
+      "follow": "serial/parallel",
+      "language": "c++",
+      "code": "#include <iostream>\nint main() {\n    std::cout << \"Hello, world!\" << std::endl;\n    return 0;\n}"
+    },
+    {
+      "follow": "serial/parallel",
+      "language": "javascript",
+      "code": "console.log('Hello, world!');"
+    },
+    {
+      "follow": "serial/parallel",
+      "language": "go",
+      "code": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"Hello, world!\")\n}"
+    }
+  ]
+}
