@@ -1,0 +1,15 @@
+pip install numba
+pip install taichi
+pip install pythran
+pip install pycuda
+pip install dask[complete]
+pip install \
+    --extra-index-url=https://pypi.nvidia.com \
+    cudf-cu12==24.8.* dask-cudf-cu12==24.8.* cuml-cu12==24.8.* \
+    cugraph-cu12==24.8.* cuspatial-cu12==24.8.* cuproj-cu12==24.8.* \
+    cuxfilter-cu12==24.8.* cucim-cu12==24.8.* pylibraft-cu12==24.8.* \
+    raft-dask-cu12==24.8.* cuvs-cu12==24.8.*
+pip install -U setuptools pip
+pip install cupy-cuda12x
+pip install cupy
+pip install conan
