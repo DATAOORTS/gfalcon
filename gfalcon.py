@@ -39,16 +39,10 @@ def run_code_snippet(snippet):
             command = f"ruby {temp_file_name}"
         elif snippet['language'] == 'mojo':
             command = f"mojo {temp_file_name}"
-        elif snippet['language'] == 'rust':
-            command = f"rustc {temp_file_name} -o {temp_file_name}.out && {temp_file_name}.out"
-        elif snippet['language'] == 'dart':
-            command = f"dart {temp_file_name}"
         elif snippet['language'] == 'bash':
             command = f"bash {temp_file_name}"
         elif snippet['language'] == 'scala':
             command = f"scala {temp_file_name}"
-        elif snippet['language'] == 'julia':
-            command = f"julia {temp_file_name}"
         elif snippet['language'] == 'codon':
             command = f"codon run -release {temp_file_name}"
         elif snippet['language'] == 'elixir':
@@ -57,8 +51,6 @@ def run_code_snippet(snippet):
             compile_command = f"cobc -x -o {temp_file_name}.out {temp_file_name}"
             subprocess.run(compile_command, shell=True, check=True)
             command = f"{temp_file_name}.out"
-        elif snippet['language'] == 'kotlin':
-            command = f"kotlin {temp_file_name}"
         elif snippet['language'] == 'node.js':
             command = f"node {temp_file_name}"
         elif snippet['language'] == 'fortran':
@@ -90,15 +82,11 @@ def get_extension(language):
         'java': '.java',
         'ruby': '.rb',
         'mojo': '.mojo',
-        'rust': '.rs',
-        'dart': '.dart',
         'bash': '.sh',
         'scala': '.scala',
-        'julia': '.jl',
         'codon': '.py',
         'elixir': '.ex',
         'cobol': '.cob',
-        'kotlin': '.kt',
         'node.js': '.js',
         'fortran': '.f90',
         'javascript': '.js',

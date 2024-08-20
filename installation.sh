@@ -54,8 +54,8 @@ npm install -g typescript
 curl -s https://get.modular.com | sh -s -- 40218620-c1e9-4d17-8983-e5c71bf7a2e9
 modular install mojo
 BASHRC=$( [ -f "$HOME/.bash_profile" ] && echo "$HOME/.bash_profile" || echo "$HOME/.bashrc" )
-echo 'export MODULAR_HOME="/home/rjvishwa/.modular"' >> "$BASHRC"
-echo 'export PATH="/home/rjvishwa/.modular/pkg/packages.modular.com_mojo/bin:$PATH"' >> "$BASHRC"
+echo 'export MODULAR_HOME="/home/root/.modular"' >> "$BASHRC"
+echo 'export PATH="/home/root/.modular/pkg/packages.modular.com_mojo/bin:$PATH"' >> "$BASHRC"
 source "$BASHRC"
 # codon 19
 echo "y" | /bin/bash -c "$(curl -fsSL https://exaloop.io/install.sh)"
